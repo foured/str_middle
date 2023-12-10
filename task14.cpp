@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "str_middle.h"
+#include "middle_str.h"
 
 int main() {
 	bool stop = false;
