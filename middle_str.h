@@ -1,5 +1,5 @@
-#ifndef STR_MIDDLE
-#define STR_MIDDLE
+#ifndef MIDDLE_STR
+#define MIDDLE_STR
 
 #include <iostream>
 #include <string>
