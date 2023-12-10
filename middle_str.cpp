@@ -1,4 +1,4 @@
-#include "str_middle.h"
+#include "middle_str.h"
 
 long long len(std::string line) {
 	int t = 0;
