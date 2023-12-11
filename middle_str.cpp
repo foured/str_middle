@@ -89,7 +89,7 @@ unsigned char itc_changeCase(unsigned char c) {
 
 	return c;
 }
-bool itc_сompare(std::string s1, std::string s2) {
+bool itc_compare(std::string s1, std::string s2) {
 	return s1 == s2;
 }
 int itc_countWords(std::string str) {
