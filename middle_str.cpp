@@ -31,7 +31,7 @@ std::string replaceAllNotLetterChars(std::string line) {
 	std::string res;
 	for (int i = 0; line[i] != '\0'; i++) {
 		char c = line[i];
-		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= 'а' && c <= 'я') || (c >= 'А' && c <= 'Я')) {
 			res += c;
 		}
 	}
@@ -77,7 +77,7 @@ bool itc_isDigit(unsigned char c) {
 	return c >= '0' && c <= '9';
 }
 unsigned char itc_toUpper(unsigned char c) {
-	if(!(c >= 'A' && c <= 'Z'))
+	if (c >= 'a' && c <= 'z')
 		return c - 32;
 	return c;
 }
@@ -98,7 +98,7 @@ int itc_countWords(std::string str) {
 	str += " ";
 	for (int i = 0; str[i] != '\0'; i++) {
 		char cc = str[i];
-		if (cc == ' ') {	
+		if (cc == ' ') {
 			res += !containsNotLetter_v1(currentWord);
 			currentWord = "";
 		}
@@ -115,7 +115,7 @@ std::string itc_maxCharWord(std::string str) {
 	for (int i = 0; str[i] != '\0'; i++) {
 		char cc = str[i];
 		if (cc == ' ') {
-			if(!containsNotLetter_v2(currentWord) && len(currentWord) > lastSize){
+			if (!containsNotLetter_v2(currentWord) && len(currentWord) > lastSize) {
 				lastSize = len(currentWord);
 				res = replaceAllNotLetterChars(currentWord);
 			}
