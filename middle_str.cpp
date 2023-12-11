@@ -153,6 +153,7 @@ bool itc_isFirstInSecond(std::string s1, std::string s2) {
 	return false;
 }
 std::string itc_Cezar(std::string str, int k) {
+	if (str == "") return "";
 	std::string res;
 	for (char c : str) {
 		if (c + k < 'a')
